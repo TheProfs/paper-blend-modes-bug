@@ -25,6 +25,12 @@ Layer 2 doesn't render anything. This is because of the size of Layer 2.
 If we scroll by a lesser value, say `0, 5000` and `5000, 0`, it renders OK
 at least on Chrome 90.
 
+On iOS 14 Safari it still doesn't render and also the following warning message
+appears:
+
+> Canvas area exceeds the maximum limit (width * height > 16777216).
+https://paper-blend-modes-bug.herokuapp.com/favicon.ico
+
 
 ## Authors
 
