@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.js"></script>
+<script type="text/javascript">
+	window.onload = function() {
+    paper.install(window)
+
+    const project = new Project(document.getElementById('canvas'))
+    project.activate()
+
+    const backgroundLayer = new Layer()
+    const foregroundLayer = new Layer()
+
+    foregroundLayer.blendMode = 'source-over'
+
+    backgroundLayer.activate()
+
+    const shape1 = new Shape.Circle(new Point(80, 50), 30)
+    shape1.fillColor = 'red'
+
+    foregroundLayer.activate()
+
+    const shape2 = new Shape.Circle(new Point(110, 50), 30)
+    shape2.fillColor = 'blue'
+    shape2.blendMode = 'destination-out'
+
+    foregroundLayer.view.scrollBy(0, 8000)
+
+    const shape3 = new Shape.Circle(new Point(paper.view.center), 30)
+    shape3.fillColor = 'purple'
+
+    foregroundLayer.view.scrollBy(8000, 0)
+
+    const shape4 = new Shape.Circle(new Point(paper.view.center), 30)
+    shape4.fillColor = 'gray'
+
+    console.log('Foregound Layer bounds:', foregroundLayer.bounds, ', area:', foregroundLayer.bounds.area)
+	}
+</script>
+</head>
+<body>
+	<canvas width="500" height="500" id="canvas"></canvas>
+</body>
+
+</html>

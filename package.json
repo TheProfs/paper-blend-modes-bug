@@ -1,0 +1,31 @@
+{
+  "name": "paper-blend-modes-bug",
+  "version": "0.1.0",
+  "description": "PaperJS blendmodes issue",
+  "main": "server/app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheProfs/paper-blend-modes-bug.git"
+  },
+  "keywords": [
+    "paperjs",
+    "bug",
+    "bitpaper"
+  ],
+  "author": "Bitpaper LTD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheProfs/paper-blend-modes-bug/issues"
+  },
+  "homepage": "https://github.com/TheProfs/paper-blend-modes-bug#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
